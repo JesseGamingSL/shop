@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Gaming Official Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f5f7f8; margin: 0; padding: 0; color: #111; -webkit-font-smoothing: antialiased; }
+        
+        /* High Quality Banner Fix */
+        .header { background: #fff; text-align: center; padding-bottom: 30px; border-bottom: 1px solid #eee; }
+        .banner-wrap { width: 100%; background: #000; text-align: center; overflow: hidden; }
+        .banner { 
+            width: 100%; 
+            max-width: 1600px; 
+            height: auto; 
+            max-height: 280px; 
+            object-fit: cover; 
+            display: block;
+            margin: 0 auto;
+            image-rendering: high-quality; /* Blur ගතිය නැති කරයි */
+        }
+
+        .profile-wrap { margin-top: -75px; position: relative; z-index: 10; }
+        .logo { width: 140px; height: 140px; border-radius: 50%; border: 6px solid #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.1); object-fit: cover; }
+        .name { font-size: 28px; font-weight: 800; margin: 15px 0 5px; letter-spacing: -0.5px; }
+        
+        /* Stats Animation Section */
+        .stats-row { display: flex; justify-content: center; gap: 35px; margin-top: 15px; }
+        .stat-box { font-size: 16px; color: #444; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+        .stat-box i { color: #ff0000; font-size: 19px; }
+        .stat-num { font-size: 20px; font-weight: 800; color: #000; }
+
+        .thanks-msg { margin-top: 20px; font-weight: 700; color: #333; font-size: 16px; letter-spacing: 0.5px; }
+
+        /* Grid Area */
+        .container { max-width: 1250px; margin: 50px auto; padding: 0 25px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 30px; }
+        
+        /* Product Card UI */
+        .card { background: #fff; border-radius: 24px; overflow: hidden; position: relative; transition: all 0.3s ease; border: 1px solid #ececec; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        
+        /* Image Box - Full Mockup View */
+        .img-box { width: 100%; height: 400px; background: #f0f2f3; display: flex; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box; }
+        .product-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .hot-label { position: absolute; top: 18px; right: 18px; background: #ff3b30; color: #fff; padding: 6px 15px; border-radius: 12px; font-size: 11px; font-weight: 800; z-index: 5; box-shadow: 0 4px 10px rgba(255,59,48,0.25); }
+        .price-tag { position: absolute; bottom: 108px; right: 18px; background: rgba(255,255,255,0.95); padding: 6px 14px; border-radius: 12px; font-weight: 800; font-size: 13.5px; color: #000; box-shadow: 0 3px 8px rgba(0,0,0,0.08); border: 1px solid #eee; }
+
+        .details { padding: 22px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .title { font-size: 16.5px; font-weight: 700; margin-bottom: 18px; color: #1a1a1a; }
+        
+        .btn { display: block; text-decoration: none; background: #000; color: #fff; text-align: center; padding: 15px; border-radius: 16px; font-weight: 700; font-size: 14px; transition: 0.2s; border: none; outline: none; }
+        .btn:hover { background: #333; transform: scale(1.02); }
+
+        /* Footer */
+        .footer { text-align: center; padding: 60px 20px; border-top: 1px solid #eee; margin-top: 60px; color: #999; font-size: 13.5px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="banner-wrap">
+            <img src="https://i.ibb.co/cXbDyXR9/Green-Modern-Gaming-Channel-Banner-1.png" class="banner" alt="Jesse Gaming Banner">
+        </div>
+        <div class="profile-wrap">
+            <img src="https://i.ibb.co/cSr62wk4/5.png" class="logo" alt="Jesse Gaming Logo">
+            <div class="name">Jesse Gaming</div>
+            <div class="stats-row">
+                <div class="stat-box"><i class="fab fa-youtube"></i> <span id="subs" class="stat-num">0</span></div>
+                <div class="stat-box"><i class="fas fa-chart-bar"></i> <span id="views" class="stat-num">0</span></div>
+            </div>
+            <div class="thanks-msg">Thank you so much for your support ❤️</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grid">
+
+            <div class="card">
+                <div class="hot-label">HOT</div>
+                <div class="img-box"><img src="https://i.ibb.co/BHGYPXLz/SAKURA.png" class="product-img"></div>
+                <div class="price-tag">$1 (Rs. 300)</div>
+                <div class="details">
+                    <div class="title">SAKURA</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJHhUM33vdVlGiJ-AFjFgFoOFgM43TpuujY9MvaV9EobZgzA/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="hot-label">HOT</div>
+                <div class="img-box"><img src="https://i.ibb.co/hxJX701p/BOOOYAAAHH.png" class="product-img"></div>
+                <div class="price-tag">$1 (Rs. 300)</div>
+                <div class="details">
+                    <div class="title">BOOYAH</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJHhUM33vdVlGiJ-AFjFgFoOFgM43TpuujY9MvaV9EobZgzA/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="hot-label">HOT</div>
+                <div class="img-box"><img src="https://i.ibb.co/qMqs8svk/ALL-IN-ONE.png" class="product-img"></div>
+                <div class="price-tag">$3 (Rs. 900)</div>
+                <div class="details">
+                    <div class="title">6 IN ONE MEGA PACK</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDqX3i0T1hXfzFpfy8cC-lB76OsHUh85UCkGX6Ij6PS3BkoA/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/Y7KScCpQ/SAMURAI.png" class="product-img"></div>
+                <div class="price-tag">$1 (Rs. 300)</div>
+                <div class="details">
+                    <div class="title">SAMURAI</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJHhUM33vdVlGiJ-AFjFgFoOFgM43TpuujY9MvaV9EobZgzA/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/jv0zqQ2n/CLOCK-TOWER.png" class="product-img"></div>
+                <div class="price-tag">$0 (Rs. 0)</div>
+                <div class="details">
+                    <div class="title">CLOCK TOWER</div>
+                    <a href="https://www.mediafire.com/file/pregn7milu2gjdn/CLOCK+TOWER.png/file" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/S4f5Tghc/TRAP-BOOYAH-SAMURAI.png" class="product-img"></div>
+                <div class="price-tag">$2 (Rs. 600)</div>
+                <div class="details">
+                    <div class="title">3 IN ONE P1</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLZ2ASI4iN10tLRx2oHZz3WxyjJRNhQD2OGIPf6Mjbl63mEQ/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/8wfZtxT/DJ-ALOK.png" class="product-img"></div>
+                <div class="price-tag">$0 (Rs. 0)</div>
+                <div class="details">
+                    <div class="title">DJ ALOK</div>
+                    <a href="https://www.mediafire.com/file/kg2xutmmc7pz45p/DJ+ALOK.png/file" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/fVFTN7cq/LOOTS-IN-THE-BEACH.png" class="product-img"></div>
+                <div class="price-tag">$1 (Rs. 300)</div>
+                <div class="details">
+                    <div class="title">LOOTS IN BEACH</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJHhUM33vdVlGiJ-AFjFgFoOFgM43TpuujY9MvaV9EobZgzA/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/mF0RLqZK/RED-CRIMINAL.png" class="product-img"></div>
+                <div class="price-tag">$1 (Rs. 300)</div>
+                <div class="details">
+                    <div class="title">RED CRIMINAL</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJHhUM33vdVlGiJ-AFjFgFoOFgM43TpuujY9MvaV9EobZgzA/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/BVjbS0fB/DRAKO-AK.png" class="product-img"></div>
+                <div class="price-tag">$0 (Rs. 0)</div>
+                <div class="details">
+                    <div class="title">DRACO AK</div>
+                    <a href="https://www.mediafire.com/file/n43jrvvj0kwz2fz/DRAKO+AK.png/file" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/gbsRHvHq/SAKURA-RED-CRIMINAL-LOOTS-IN-THE-BEACH.png" class="product-img"></div>
+                <div class="price-tag">$2 (Rs. 600)</div>
+                <div class="details">
+                    <div class="title">3 IN ONE P2</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLZ2ASI4iN10tLRx2oHZz3WxyjJRNhQD2OGIPf6Mjbl63mEQ/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/7NSDD8fL/TRAP.png" class="product-img"></div>
+                <div class="price-tag">$1 (Rs. 300)</div>
+                <div class="details">
+                    <div class="title">TRAP</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJHhUM33vdVlGiJ-AFjFgFoOFgM43TpuujY9MvaV9EobZgzA/viewform?usp=header" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/XrjwdvnX/GLUE-WALL.png" class="product-img"></div>
+                <div class="price-tag">$0 (Rs. 0)</div>
+                <div class="details">
+                    <div class="title">HAYATO</div>
+                    <a href="https://www.mediafire.com/file/s36dlnwxzls7mh4/HAYATO.png/file" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-box"><img src="https://i.ibb.co/Wvbky3LL/REAL-WALL.png" class="product-img"></div>
+                <div class="price-tag">$0 (Rs. 0)</div>
+                <div class="details">
+                    <div class="title">GLUE WALL</div>
+                    <a href="https://www.mediafire.com/file/86umsqvs4filvvf/GLUE+WALL.png/file" class="btn">GET NOW</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Jesse Gaming. All Rights Reserved. &bull; <i class="fas fa-shield-alt"></i> Genuine Digital Assets</p>
+    </div>
+
+    <script>
+        // Number Animation
+        function animateValue(id, end, duration) {
+            let obj = document.getElementById(id);
+            let start = 0;
+            let range = end - start;
+            let increment = Math.ceil(range / (duration / 20));
+            let timer = setInterval(() => {
+                start += increment;
+                if (start >= end) {
+                    obj.innerText = end.toLocaleString() + "+";
+                    clearInterval(timer);
+                } else {
+                    obj.innerText = start.toLocaleString();
+                }
+            }, 20);
+        }
+
+        window.onload = () => {
+            animateValue("subs", 9200, 2500);
+            animateValue("views", 509000, 3000);
+        };
+    </script>
+</body>
+</html>
